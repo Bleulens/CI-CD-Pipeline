@@ -1,2 +1,2 @@
 # CI-CD-Pipeline
-Create pipeline using aws
+My goal here is to simulate the CI/CD aspect of a cloud engineer work environment. 
