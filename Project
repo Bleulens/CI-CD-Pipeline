@@ -1,0 +1,30 @@
+Objective: Create CI/CD Pipeline using github
+
+Tools used: Github, Git Bash, Visual Studio Code, AWS Code Build, AWS CodePipeline, AWS ElasticBeanstalk
+
+What I did: Forked a sample aws elastic beanstalk express repo over to my personal github account.
+	    Cloned the repository in my account using https to my pc by hitting the code button near the top of the page.  
+	    Copied the https url.
+	    Launched Git Bash and created a new folder with a copy of the files from the repo I just forked. 
+	    Command: git clone https://github.com/YOUR-USERNAME/aws-elastic-beanstalk-express-js-sample
+ 	    Opened up a Javascript file from the new folder using VSCode, changed a line and the saved the file.
+	    Pushed the change to the hosted repository in GitHub by going to file directory in Git Bash and commiting/pushing.
+	    Command: git add app.js
+	             git commit -m "change message"
+		     git push
+	    Before I could push I needed to create a personal access token(classic) under Developer settings in GitHub for remote authentication.
+	    Command: git remote set-url origin https://<token>@github.com/<git_url>
+	    Configure and create Elastic Beanstalk environment to deploy sample web app	and then test it.
+	    Created a policy and instance profile for Elastic Beanstalk role.
+	    Set Git Hub as the source provider for a build project using AWS CodeBuild.
+ 	    Run a build.
+ 	    Use AWS CodePipeline to set up a continuous delivery pipeline with source, build, and deploy stages.
+	    Used GitHub repository as the source, AWS CodeBuild as the build, and AWS CodePipeline as the deploy stages.
+	    Added a review stage between the build and and deploy stages. Manual review action.
+
+What I learned: How to create a Continuous Integration/Continuous Deployment pipline using AWS native tools and github.
+	        The process was easier than I thought it would be, granted I used ElasticBeanstalk which cuts out the infratructure part of the
+		set-up process.
+		I now have a better understanding of what a real work environment looks like in terms of being part of a team and making contributions
+		to a project via a single or multiple pipelines.
+	    	
